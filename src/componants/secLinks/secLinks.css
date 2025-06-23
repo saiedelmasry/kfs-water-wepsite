@@ -1,0 +1,32 @@
+.secLinks {
+  width: 100%;
+  margin-top: 70px;
+ 
+}
+.links {
+  background-color: var(--color150);
+  color: var(--color900);
+  padding: 15px 0;
+  border-radius: 20px;
+  border: 0.3px solid rgba(12, 12, 12, 0.185);
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--color600);
+    transform: scale(1.1);
+  }
+  &:hover h1 {
+    color: var(--color100);
+  }
+  & img {
+    filter: drop-shadow(3px 0 5px rgba(0, 0, 0, 0.281));
+    width: clamp(40px, 4vw, 60px);
+  }
+  & h1 {
+    /* text-wrap: nowrap; */
+    text-align: center;
+    font-size: clamp(15px, 4vw, 20px);
+    color: var(--color900);
+  }
+}
+

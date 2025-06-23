@@ -1,0 +1,77 @@
+.electric_services {
+  background-color: var(--color100);
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+.app_buttons {
+  width: fit-content;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color900);
+}
+
+.app_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  & img {
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.2));
+  }
+  & svg {
+    position: absolute;
+    z-index: 0;
+    animation: svg_animation 0.4s linear;
+  }
+}
+.app_text {
+  animation: appText_animation 0.4s linear;
+}
+.app_img_moukup {
+  animation: appImg_animation 0.4s linear;
+}
+
+@keyframes svg_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appText_animation {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appImg_animation {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* disaple effect */
+@media (max-width: 991px) {
+  .app_text,
+  .app_img_moukup {
+    animation: none;
+  }
+}

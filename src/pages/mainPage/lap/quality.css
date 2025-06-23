@@ -1,0 +1,26 @@
+.quality_text {
+  background-color: var(--color100);
+  padding: 20px;
+}
+.quality_img {
+  outline: 2px solid var(--color700);
+  outline-offset: 3px;
+}
+.quality .list-group {
+  counter-reset: counter;
+}
+.quality .list-group-item {
+  width: fit-content;
+  padding: 10px 0 !important;
+  font-size: clamp(13px, 3vw, 16px) !important;
+  background: none !important;
+  &::before {
+    content: counter(counter)" -";
+    counter-increment: counter;
+    border: none;
+    font-size: clamp(12px, 3vw, 16px) !important;
+    margin: 0 0 0 10px;
+    vertical-align: 0;
+    color: var(--color700);
+  }
+}

@@ -1,0 +1,26 @@
+.sectitle {
+  text-align: center;
+  text-wrap: nowrap;
+  width: fit-content;
+  margin: 60px auto;
+
+  & h2 {
+    color: var(--color900);
+    font-size: clamp(15px, 3vw, 18px);
+    &::after {
+      content: "-";
+      color: var(--color700);
+      margin-right: 10px;
+    }
+    &::before {
+      content: "-";
+      color: var(--color700);
+      margin-left: 10px;
+    }
+  }
+  & h4 {
+    margin-top: 10px !important;
+    color: var(--color700);
+    font-size: clamp(15px, 3vw, 23px);
+  }
+}

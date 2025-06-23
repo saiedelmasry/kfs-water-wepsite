@@ -1,0 +1,32 @@
+.counter {
+  background-color: var(--color150);
+}
+.counter-child {
+  padding: 15px;
+  & .col-6 > div {
+    padding: 15px;
+  }
+  & :where(.firstChild, .secondChild, .thirdChild) {
+    border-left: 1px solid black;
+  }
+
+  & span {
+    font-size: clamp(25px, 3vw, 45px);
+    color: var(--color700);
+    font-weight: bold;
+  }
+  & h3 {
+    font-size: clamp(15px, 3vw, 20px);
+    color: var(--color900);
+  }
+}
+@media (max-width: 767px) {
+  .counter-child {
+    & :where(.firstChild, .secondChild, .thirdChild) {
+      border-left: 1px solid transparent;
+    }
+    & :where(.firstChild,.thirdChild) {
+      border-left: 1px solid black;
+    }
+  }
+}

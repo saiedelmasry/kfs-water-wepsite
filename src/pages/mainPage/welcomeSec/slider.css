@@ -1,0 +1,62 @@
+.slider > .effect {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(3, 29, 78, 0.144),
+    rgba(0, 0, 0, 0.747)
+  );
+  z-index: 1;
+}
+.effect .links-container {
+  & .welcome-title {
+    font-size: clamp(20px, 3vw, 30px);
+  }
+  & .welcome-title:nth-child(2) {
+    font-size: clamp(20px, 3vw, 25px);
+  }
+  & .link {
+    background-color: rgba(231, 241, 255, 0.856);
+    color: var(--color900);
+    padding: 15px;
+    border-radius: 20px;
+    border: 0.5px solid rgba(12, 12, 12, 0.301);
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: var(--color600);
+      transform: scale(1.1);
+      color: white;
+    }
+    & img {
+      filter: drop-shadow(3px 0 5px rgba(0, 0, 0, 0.281));
+      width: clamp(40px, 4vw, 60px);
+    }
+    & h1 {
+      text-wrap: nowrap;
+      font-size: clamp(15px, 4vw, 20px);
+    }
+  }
+}
+.carousel {
+  position: relative;
+}
+.carousel-item {
+  height: 100vh;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 50px !important;
+
+  z-index: 2 !important;
+}
+@media (max-width: 1200px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+}
+
+.carousel-indicators {
+  display: none !important;
+}

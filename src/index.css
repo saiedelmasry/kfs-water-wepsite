@@ -1,0 +1,58 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 3000px;
+  font-family: "Cairo", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* root propertys ----------------- */
+:root {
+  --body: #fefeff;
+  --color100: #f3f9ff;
+  --color150: #daecff;
+  --color600: #6a93e6;
+  --color700: #295fcc;
+  --color800: #254383;
+  --color900: #1b2a50;
+}
+
+/* classes ------------------------*/
+.sec {
+  position: relative;
+  overflow: hidden;
+  & h1 {
+    color: var(--color700);
+  }
+}
+.speacial_btn {
+  background-color: var(--color100) !important;
+  color: var(--color900) !important;
+  padding: 10px 15px !important;
+  border: none !important;
+  transition: 0.5s;
+}
+.speacial_btn_active {
+  background-color: var(--color900) !important;
+  color: var(--color100) !important;
+  padding: 10px 15px !important;
+  border: none !important;
+  transition: 0.5s;
+}
+
+
+/* elements main style ------------ */
+h1,
+h2,
+h3 {
+  margin: 0 !important;
+}
+
+p {
+  color: var(--color900) !important;
+}
+
+a {
+  text-decoration: none !important;
+}

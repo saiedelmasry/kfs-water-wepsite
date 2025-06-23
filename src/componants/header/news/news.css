@@ -1,0 +1,44 @@
+.main {
+  width: 100%;
+  overflow: hidden;
+  text-wrap: nowrap;
+  background-color: white;
+  padding: 5px 0;
+  line-height: 0;
+  mask: linear-gradient(
+    to left,
+    transparent,
+    white 10%,
+    white 90%,
+    transparent
+  );
+}
+.content {
+  width: fit-content;
+  display: inline-block;
+  animation: scroll 60s linear infinite;
+  line-height: 0;
+}
+.main:hover .content {
+  animation-play-state: paused;
+}
+.content > h1 {
+  color: var(--color900);
+  display: inline-block;
+  font-size: clamp(10px, 3vw, 14px);
+}
+.content > h1::after {
+  content: "-";
+  margin: 0 10px;
+}
+.content > h1 > span {
+  color: red;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

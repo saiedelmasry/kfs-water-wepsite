@@ -1,0 +1,121 @@
+.library-news {
+  height: 75vh;
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+  background-color: var(--color100);
+}
+.library-news svg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+}
+.btn-container {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 40px auto;
+  border: 0.5px solid var(--color800);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px 3px rgba(7, 44, 124, 0.164);
+  border-radius: 20px;
+  border: 2px solid var(--color150);
+}
+.swiper-slide {
+  height: 100% !important;
+  overflow: hidden;
+  gap: 0;
+}
+.swiper-pagination {
+  bottom: 0 !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color100) !important;
+  padding: 0 50px;
+  filter: drop-shadow(0 0 30px black);
+}
+@media (max-width: 991px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+/* news_container style ----------------------------- */
+
+.news_container_text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  & > div {
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.473), rgba(255, 255, 255, 0));
+    z-index: 0;
+
+    & h1 {
+      color: var(--color100);
+      font-weight:bold;
+    }
+    & p {
+      color: white !important;
+    }
+  }
+}
+/* videos_container style --------------------------- */
+.video_container {
+  & .effect {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      
+      rgba(4, 21, 37, 0.479),
+      rgba(5, 26, 53, 0)
+    );
+    cursor: pointer;
+    z-index: 1 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & .video_icon {
+    all: revert;
+    width: 70px;
+    color: var(--color100);
+    animation: play_icon 0.5s alternate infinite;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 100px black);
+  }
+}
+@keyframes play_icon {
+  from {
+    outline: 0 solid transparent;
+    outline-offset: 0;
+    transform: scale(0.8);
+  }
+  to {
+    outline: 5px solid var(--color700);
+    outline-offset: 8px;
+    transform: scale(1);
+  }
+}
+

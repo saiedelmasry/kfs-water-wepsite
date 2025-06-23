@@ -1,0 +1,24 @@
+.other_links_col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.164);
+  padding: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+  &:hover {
+    transform: scale(1.1);
+  }
+ 
+}
+.other_links_img {
+  width: 150px;
+}
+.other_links_text {
+  font-size: clamp(13px, 4vw, 18px);
+  color: var(--color800);
+  text-align: center;
+}
